@@ -1,0 +1,10 @@
+{
+  "name": "rcon",
+  "description": "rcon protocol wrapper for node",
+  "keywords": ["rcon", "protocol"],
+  "version": "0.0.1",
+  "main":"RCON.js",
+  "engines": {
+      "node": ">=10.16.0"
+  }
+}

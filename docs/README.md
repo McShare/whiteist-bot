@@ -41,6 +41,24 @@
 2. /query?mcid=SuperYYT，查询minecarft昵称为SuperYYT的用户的minebbs昵称
 3. /query?mcid=SuperYYT&mbid=YYT，查询两个昵称是否互相匹配 
 
+响应格式
+eg：http://127.0.0.1:3000/query?mbid=YYT
+``` json
+{
+  "code": 0,
+  "data": {
+    "find": true,  //找不到为false
+    "result": "SuperYYT"
+  }
+}
+```
+eg：http://127.0.0.1:3000/query?mbid=YYT&mcid=SuperYYT
+``` json
+{
+  "code": 0,
+  "match": true //两个id匹配，不匹配为false
+}
+```
 ## 移除白名单
 
 ```

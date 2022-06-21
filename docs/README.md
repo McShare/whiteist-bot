@@ -2,6 +2,14 @@
 
 每个接口都会返回`code`表示请求受理情况
 
+|相应|含义|
+|:-:|:-:|
+|0|OK|
+|1|提交数据缺项|
+|2|请求路径不存在|
+|3|白名单已经存在|
+|100|服务器内部错误|
+
 详见：https://github.com/McShare/whiteist-bot/blob/main/src/webapi/statusCode.js
 
 使用`node app`启动服务器之后

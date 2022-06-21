@@ -1,15 +1,14 @@
 const rcon = require('../node-rcon');
 var log4js = require("log4js");
-
+const fs = require("fs");
 class Server{
     rcon;
     host;
     port;
     passwd;
     logger;
-    name;
-    constructor(name,host,port,pwd){
-        this.logger = log4js.getLogger(name);
+    constructor(host,port,pwd){
+        this.logger = log4js.getLogger();
         this.logger.level = 'debug'
         this.rcon = new rcon();
         this.port = port;
@@ -29,8 +28,13 @@ class Server{
             this.logger.error(err);
         });
     }
-    send(cmd){
-        return this.rcon.send(cmd);
+    async send(cmd){
+        try {
+            this.logger.info('发送：'+cmd);
+            return await this.rcon.send(cmd);
+        } catch (message) {
+            return console.log(message);
+        }
     }
     #protect(){
         if(this.rcon.online == false){
@@ -40,4 +44,6 @@ class Server{
     }
 }
 
-module.exports = {Server};
+let config = require('../../config.json');
+
+module.exports = new Server(config.server.host,config.server.port,config.server.password);

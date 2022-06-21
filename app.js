@@ -30,8 +30,10 @@ app.use(allowCrossDomain); // 使中间件生效
 
 const add = require('./src/webapi/add');
 const query = require("./src/webapi/query");
+const rem = require('./src/webapi/rem');
 
 app.get('/query',query);
+app.post('/rem',rem);
 app.post('/add',add);
 
 app.listen(config.port,()=>{

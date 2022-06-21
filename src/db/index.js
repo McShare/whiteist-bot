@@ -38,7 +38,7 @@ function match(mbid,mcid){
 }
 
 function rem(id){
-    let r = db.prepare(`DELETE FROM  MBID WHERE NAME = "${id}" OR MCNAME = "${id}"`).run();
+    let r = db.prepare(`DELETE FROM MBID WHERE NAME = @id OR MBNAME = @id;`).run({id});
     return r.changes;
 }
 

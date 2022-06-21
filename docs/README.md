@@ -83,3 +83,7 @@ eg：http://127.0.0.1:3000/query?mbid=YYT&mcid=SuperYYT
 ```
 
 如果两个参数同时存在会先判断`mbid`
+
+![](https://s1.ax1x.com/2022/06/21/jSZ5Lj.png)
+
+如果后台有这样的提示代表加、删白名单成功

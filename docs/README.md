@@ -36,3 +36,7 @@
 |mbid|minebbs昵称|
 |mcid|minecarft昵称|
 
+举例子
+1. /query?mbid=YYT，查询Minebbs昵称为YYT的用户的minecarft昵称
+2. /query?mcid=SuperYYT，查询minecarft昵称为SuperYYT的用户的minebbs昵称
+3. /query?mcid=SuperYYT&mbid=YYT，查询两个昵称是否互相匹配 

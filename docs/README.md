@@ -40,3 +40,27 @@
 1. /query?mbid=YYT，查询Minebbs昵称为YYT的用户的minecarft昵称
 2. /query?mcid=SuperYYT，查询minecarft昵称为SuperYYT的用户的minebbs昵称
 3. /query?mcid=SuperYYT&mbid=YYT，查询两个昵称是否互相匹配 
+
+## 移除白名单
+
+```
+[POST] /rem
+```
+
+请求格式JSON为
+
+``` json
+{
+  "mbid":"YYT"
+}
+```
+
+或者
+
+``` json
+{
+  "mcid":"SupperYYT"
+}
+```
+
+如果两个参数同时存在会先判断`mbid`

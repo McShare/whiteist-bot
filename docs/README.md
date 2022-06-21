@@ -42,6 +42,7 @@
 3. /query?mcid=SuperYYT&mbid=YYT，查询两个昵称是否互相匹配 
 
 响应格式
+
 eg：http://127.0.0.1:3000/query?mbid=YYT
 ``` json
 {
